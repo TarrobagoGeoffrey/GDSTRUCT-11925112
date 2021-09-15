@@ -6,7 +6,7 @@ public class Main {
 
         int[] numbers = new int[5];
 
-        numbers[0] = 90;
+        //numbers[0] = 90;
         numbers[1] = 85;
         numbers[2] = -15;
         numbers[3] = 50;
