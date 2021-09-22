@@ -17,22 +17,45 @@ public class Main {
         numbers[8] = 90;
         numbers[9] = 74;
 
-        System.out.println("Before Selection sort:");
+        int[] number = new int[10];
+
+        number[0] = 42;
+        number[1] = 53;
+        number[2] = 59;
+        number[3] = 24;
+        number[4] = 92;
+        number[5] = 10;
+        number[6] = 93;
+        number[7] = 231;
+        number[8] = 152;
+        number[9] = 97;
+
+        System.out.println("Before Bubble sort:");
         printArrayElements(numbers);
 
-        selectionSort(numbers);
+        System.out.println("Before Selection sort:");
+        printArrayElements(number);
+
+
+        selectionSort(number);
+        bubbleSort(numbers);
 
         System.out.println("\n\nAfter Selection sort");
+        printArrayElements(number);
+
+        System.out.println("\n\nAfter Bubble sort");
         printArrayElements(numbers);
+
+
     }
 
-    private static void bubblesort(int[] arr)
+    private static void bubbleSort(int[] arr)
     {
         for (int lastsortedindex = arr.length - 1; lastsortedindex > 0; lastsortedindex--)
         {
             for (int i = 0; i < lastsortedindex; i++)
             {
-                if (arr[i] > arr[i + 1])
+                if (arr[i] < arr[i + 1])
                 {
                     int temp = arr[i];
                     arr[i] = arr[i + 1];
@@ -46,19 +69,19 @@ public class Main {
     {
         for (int lastSortedIndex = arr.length - 1; lastSortedIndex > 0; lastSortedIndex--)
         {
-            int largestIndex = 0;
+            int smallestIndex = 1;
 
-            for (int i = 0; i <= lastSortedindex; i++)
+            for (int i = 0; i <= lastSortedIndex; i++)
             {
-                if (arr[i] > arr[largestIndex])
+                if (arr[i] > arr[smallestIndex])
                 {
-                    largestIndex = i;
+                    smallestIndex = i;
                 }
             }
 
             int temp = arr[lastSortedIndex];
-            arr[lastSortedIndex] = arr[largestIndex];
-            arr[lasrgestIndex] = temp;
+            arr[lastSortedIndex] = arr[smallestIndex];
+            arr[smallestIndex] = temp;
 
         }
     }
