@@ -33,7 +33,7 @@ public class Main {
         System.out.println("Before Bubble sort:");
         printArrayElements(numbers);
 
-        System.out.println("Before Selection sort:");
+        System.out.println("\n\nBefore Selection sort:");
         printArrayElements(number);
 
 
@@ -69,7 +69,7 @@ public class Main {
     {
         for (int lastSortedIndex = arr.length - 1; lastSortedIndex > 0; lastSortedIndex--)
         {
-            int smallestIndex = 1;
+            int smallestIndex = 0;
 
             for (int i = 0; i <= lastSortedIndex; i++)
             {
