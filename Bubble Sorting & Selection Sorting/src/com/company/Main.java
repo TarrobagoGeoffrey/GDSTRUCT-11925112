@@ -73,7 +73,7 @@ public class Main {
 
             for (int i = 0; i <= lastSortedIndex; i++)
             {
-                if (arr[i] > arr[smallestIndex])
+                if (arr[i] < arr[smallestIndex])
                 {
                     smallestIndex = i;
                 }
