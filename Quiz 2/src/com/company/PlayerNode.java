@@ -4,12 +4,8 @@ public class PlayerNode {
     private Player player;
     private PlayerNode nextPlayer;
 
-    public PlayerNode(Player player, PlayerNode nextPlayer) {
-        this.player = player;
-        this.nextPlayer = nextPlayer;
-    }
-
     public PlayerNode(Player player) {
+        this.player = player;
     }
 
     public Player getPlayer() {
