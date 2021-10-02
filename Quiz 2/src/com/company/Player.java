@@ -13,12 +13,6 @@ public class Player {
         this.level = level;
     }
 
-    public static void remove(int i) {
-    }
-
-    public static void size() {
-    }
-
     public int getId() {
         return id;
     }
