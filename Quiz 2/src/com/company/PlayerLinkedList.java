@@ -4,18 +4,7 @@ public class PlayerLinkedList {
 
     private PlayerNode head;
 
-    public static void removeAt(int i)
-    {
-        PlayerLinkedList.removeAt(1);
-    }
-
-    public static void size()
-    {
-        System.out.println(PlayerLinkedList.size());
-    }
-
-    public void addToFront(Player player)
-    {
+    public void addToFront(Player player) {
         PlayerNode playerNode = new PlayerNode(player);
         playerNode.setNextPlayer(head);
         head = playerNode;

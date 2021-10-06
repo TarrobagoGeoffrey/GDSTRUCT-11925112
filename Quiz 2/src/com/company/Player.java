@@ -13,6 +13,11 @@ public class Player {
         this.level = level;
     }
 
+    public static void remove(int i)
+    {
+        System.out.println();
+    }
+
     public int getId() {
         return id;
     }

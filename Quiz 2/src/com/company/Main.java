@@ -12,9 +12,7 @@ public class Main {
 
         PlayerLinkedList playerLinkedList = new PlayerLinkedList();
 
-//        playerLinkedList.size();
-
-//        playerLinkedList.remove(1);
+        Player.remove(1);
 
         playerLinkedList.addToFront(amber);
         playerLinkedList.addToFront(lumine);
