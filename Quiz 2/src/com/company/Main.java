@@ -12,13 +12,15 @@ public class Main {
 
         PlayerLinkedList playerLinkedList = new PlayerLinkedList();
 
-        Player.remove(1);
-
         playerLinkedList.addToFront(amber);
         playerLinkedList.addToFront(lumine);
         playerLinkedList.addToFront(baal);
         playerLinkedList.addToFront(zhongli);
         playerLinkedList.addToFront(sara);
+
+        playerLinkedList.size(list);
+
+        playerLinkedList.removeHead();
 
         playerLinkedList.printList();
     }
