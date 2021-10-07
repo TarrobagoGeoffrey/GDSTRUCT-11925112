@@ -4,20 +4,76 @@ public class PlayerLinkedList {
 
     private PlayerNode head;
 
-//    public static void remove()
-//    {
-//        PlayerNode current = head;
-//        head = current.getNextPlayer();
-//    }
-
-//    public void remove(PlayerNode current) {
-//        current = head;
-//        head = current.getNextPlayer();
-//    }
-
-    public void size(playerLinkedList)
+   /* public static void remove()
     {
-        playerLinkedList
+        PlayerNode current = head;
+        head = current.getNextPlayer();
+    }
+
+    public void remove(PlayerNode current) {
+        current = head;
+        head = current.getNextPlayer();
+    }*/
+
+ /*   public boolean contains(Player player)
+    {
+        PlayerNode temp = head;
+        int list = 0;
+        while (temp != )
+        {
+            if (temp == )
+            {
+                return;
+            }
+            else
+            {
+                temp = temp.getNextPlayer();
+                list++;
+            }
+        }
+        System.out.println("Player is: " + list);
+    }*/
+
+    public int indexOf(Object obj)
+    {
+        int index = 0;
+
+        current = head.next;
+        while (current != null)
+        {
+            if (current.equals(obj))
+            {
+                return index;
+            }
+
+            index++;
+        current = current.next;
+        }
+    }
+
+    public boolean contains(Player player) {
+        PlayerNode current = head;
+
+        while (current != null) {
+            if (current.getPlayer().equals(player)) {
+                return true;
+            } else {
+                current = current.getNextPlayer();
+            }
+        }
+        return true;
+    }
+
+    public void size()
+    {
+        PlayerNode temp = head;
+        int list = 0;
+        while (temp != null)
+        {
+            temp = temp.getNextPlayer();
+            list++;
+        }
+        System.out.println("Number of Players: " + list);
     }
 
     public void removeHead()

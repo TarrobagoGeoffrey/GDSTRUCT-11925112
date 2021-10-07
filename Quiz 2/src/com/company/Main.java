@@ -18,7 +18,9 @@ public class Main {
         playerLinkedList.addToFront(zhongli);
         playerLinkedList.addToFront(sara);
 
-        playerLinkedList.size(list);
+        playerLinkedList.size();
+
+        playerLinkedList.contains(amber);
 
         playerLinkedList.removeHead();
 
