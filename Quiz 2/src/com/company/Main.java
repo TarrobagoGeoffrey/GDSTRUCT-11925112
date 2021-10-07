@@ -20,7 +20,9 @@ public class Main {
 
         playerLinkedList.size();
 
-        playerLinkedList.contains(amber);
+        System.out.println(playerLinkedList.contains(amber));
+
+        System.out.println(playerLinkedList.indexOf(zhongli));
 
         playerLinkedList.removeHead();
 

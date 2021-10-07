@@ -34,30 +34,37 @@ public class PlayerLinkedList {
         System.out.println("Player is: " + list);
     }*/
 
-    public int indexOf(Object obj)
+    public int indexOf(Player player)
     {
+        PlayerNode temp = head;
         int index = 0;
 
-        current = head.next;
-        while (current != null)
+        while (temp != null)
         {
-            if (current.equals(obj))
+            if (temp.getPlayer().equals(player))
             {
                 return index;
             }
-
-            index++;
-        current = current.next;
+            else
+            {
+                temp = temp.getNextPlayer();
+                index++;
+            }
         }
+        return index;
     }
 
-    public boolean contains(Player player) {
+    public boolean contains(Player player)
+    {
         PlayerNode current = head;
 
         while (current != null) {
-            if (current.getPlayer().equals(player)) {
+            if (current.getPlayer().equals(player))
+            {
                 return true;
-            } else {
+            }
+            else
+            {
                 current = current.getNextPlayer();
             }
         }
