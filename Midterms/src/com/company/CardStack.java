@@ -1,12 +1,21 @@
 package com.company;
 
 import java.util.EmptyStackException;
+import java.util.Random;
 
 public class CardStack {
     private Cards[] stack;
     private int top;
 
     public CardStack(int capacity) {stack = new Cards[capacity];}
+
+    public void randomCard (Cards cards)
+    {
+        int min = 0;
+        int max = 30;
+
+        System.out.println("Random Card; " + min + "to" + max);
+    }
 
     public void push (Cards cards)
     {
@@ -19,7 +28,7 @@ public class CardStack {
         stack[top++] = cards;
     }
 
-    public Cards pop()
+    public Cards pop (Cards cards)
     {
         if (isEmpty())
         {
