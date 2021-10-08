@@ -9,12 +9,10 @@ public class CardStack {
 
     public CardStack(int capacity) {stack = new Cards[capacity];}
 
-    public void randomCard (Cards cards)
+    public void random (Cards cards)
     {
-        int min = 0;
-        int max = 30;
+        Random random = new Random();
 
-        System.out.println("Random Card; " + min + "to" + max);
     }
 
     public void push (Cards cards)

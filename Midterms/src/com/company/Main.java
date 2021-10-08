@@ -4,7 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        CardStack stack = new CardStack(30);
+        LinkedStack stack = new LinkedStack();
+        LinkedStack hand = new LinkedStack();
+        LinkedStack discard = new LinkedStack();
 
         stack.push(new Cards(1, "Sora", 90, 32));
         stack.push(new Cards(2, "Miko", 75, 69));
@@ -38,8 +40,6 @@ public class Main {
         stack.push(new Cards(30, "Polka", 52, 32));
 
         stack.printStack();
-
-        stack.randomCard();
 
         System.out.println("Drawn card: " + stack.pop());
     }
