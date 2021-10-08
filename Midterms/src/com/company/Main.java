@@ -39,6 +39,8 @@ public class Main {
 
         stack.printStack();
 
-        System.out.println("Random card: " + stack.randomCard(stack.pop(Cards cards));
+        stack.randomCard();
+
+        System.out.println("Drawn card: " + stack.pop());
     }
 }

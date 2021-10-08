@@ -28,7 +28,7 @@ public class CardStack {
         stack[top++] = cards;
     }
 
-    public Cards pop (Cards cards)
+    public Cards pop ()
     {
         if (isEmpty())
         {

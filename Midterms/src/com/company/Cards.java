@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Cards {
     private int id;
     private String name;
@@ -53,5 +55,18 @@ public class Cards {
                 ", power=" + power +
                 ", defence=" + defence +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cards cards = (Cards) o;
+        return id == cards.id && power == cards.power && defence == cards.defence && name.equals(cards.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, power, defence);
     }
 }
