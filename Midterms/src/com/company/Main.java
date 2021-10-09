@@ -46,8 +46,8 @@ public class Main {
 
         while (!stack.isEmpty())
         {
-            int command = random.nextInt(2);
-            int x = random.nextInt(10);
+            int command = random.nextInt(3);
+            int x = random.nextInt(20);
 
             if (command == 0)
             {
@@ -62,15 +62,15 @@ public class Main {
                 for (int i = 0; i == x; i++)
                 {
                     discard.push(hand.pop());
-                    System.out.println("You discarded " + discard);
+                    System.out.println("You discarded: " + discard);
                 }
             }
-            else
+            else if (command == 2)
             {
                 for (int i = 0; i == x; i++)
                 {
                     hand.push(discard.pop());
-                    System.out.print("You drew " + hand + " from discarded pile");
+                    System.out.print("You drew from discarded pile: " + hand);
                 }
             }
             //System.out.println(x);
