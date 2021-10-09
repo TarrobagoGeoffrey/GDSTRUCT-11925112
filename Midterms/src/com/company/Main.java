@@ -47,7 +47,7 @@ public class Main {
         while (!stack.isEmpty())
         {
             int command = random.nextInt(2);
-            int x = random.nextInt(5);
+            int x = random.nextInt(10);
 
             if (command == 0)
             {
