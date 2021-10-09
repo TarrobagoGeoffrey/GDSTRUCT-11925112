@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
+import java.util.Random;
 
 public class LinkedStack {
     private LinkedList<Cards> stack;
@@ -10,6 +11,18 @@ public class LinkedStack {
     {
         stack = new LinkedList<Cards>();
     }
+
+/*
+    public int random()
+    {
+        Random random = new Random();
+
+        int command = random.nextInt(2);
+        int x = random.nextInt(5);
+
+        return int;
+    }
+*/
 
     public void push(Cards cards)
     {
@@ -35,7 +48,7 @@ public class LinkedStack {
     {
         ListIterator<Cards> iterator = stack.listIterator();
 
-        System.out.println("Existing Stack: ");
+        System.out.println("Existing Cards: ");
 
         while (iterator.hasNext())
         {

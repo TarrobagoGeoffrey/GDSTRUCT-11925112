@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -7,6 +9,7 @@ public class Main {
         LinkedStack stack = new LinkedStack();
         LinkedStack hand = new LinkedStack();
         LinkedStack discard = new LinkedStack();
+        Random random = new Random();
 
         stack.push(new Cards(1, "Sora", 90, 32));
         stack.push(new Cards(2, "Miko", 75, 69));
@@ -41,6 +44,38 @@ public class Main {
 
         stack.printStack();
 
-        System.out.println("Drawn card: " + stack.pop());
+        while (!stack.isEmpty())
+        {
+            int command = random.nextInt(2);
+            int x = random.nextInt(5);
+
+            if (command == 0)
+            {
+                for (int i = 0; i == x; i++)
+                {
+                    hand.push(stack.pop());
+                    System.out.println("You drew: " + hand);
+                }
+            }
+            else if (command == 1)
+            {
+                for (int i = 0; i == x; i++)
+                {
+                    discard.push(hand.pop());
+                    System.out.println("You discarded " + discard);
+                }
+            }
+            else
+            {
+                for (int i = 0; i == x; i++)
+                {
+                    hand.push(discard.pop());
+                    System.out.print("You drew " + hand + " from discarded pile");
+                }
+            }
+            //System.out.println(x);
+        }
+
+
     }
 }

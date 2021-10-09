@@ -9,11 +9,13 @@ public class CardStack {
 
     public CardStack(int capacity) {stack = new Cards[capacity];}
 
-    public void random (Cards cards)
+/*    public void random()
     {
-        Random random = new Random();
+        Random rand = new Random();
 
-    }
+        int rand_int1 = rand.nextInt(2);
+        int rand_int2 = rand.nextInt(5);
+    }*/
 
     public void push (Cards cards)
     {
