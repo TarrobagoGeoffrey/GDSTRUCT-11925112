@@ -9,7 +9,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         ArrayQueue queue = new ArrayQueue(12);
+        ArrayQueue lobby = new ArrayQueue(20);
         Random random = new Random();
+        int numberOfGames = 0;
 
         queue.add(new Player(1, "Gura", 73));
         queue.add(new Player(2,"Kiara",90));
@@ -24,22 +26,26 @@ public class Main {
         queue.add(new Player(11,"Mumei",63));
         queue.add(new Player(12,"Omega",100));
 
-        queue.printQueue();
+        //queue.printQueue();
 
-        while (true)
+        int inQueue = 0;
+        int inGame = 0;
+
+        if (inQueue < 0)
         {
-            int inGame = 0;
-            int x = random.nextInt(5);
-
-            if (inGame == 0)
+            int x = random.nextInt(7);
+            for (int i = 0; i < x; i++)
             {
-
-            }
-
-            else if (inGame != 0)
-            {
+                lobby.add(queue.remove());
+                inGame++;
 
             }
         }
+
+        else if (inQueue >= 5)
+        {
+            lobby.printQueue();
+        }
+        
     }
 }
