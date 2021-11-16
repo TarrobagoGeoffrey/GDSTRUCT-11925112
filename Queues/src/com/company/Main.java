@@ -11,41 +11,41 @@ public class Main {
         ArrayQueue queue = new ArrayQueue(12);
         ArrayQueue lobby = new ArrayQueue(20);
         Random random = new Random();
-        int numberOfGames = 0;
+        int numberOfGames = 10;
 
-        queue.add(new Player(1, "Gura", 73));
-        queue.add(new Player(2,"Kiara",90));
-        queue.add(new Player(3,"Ame",90));
-        queue.add(new Player(4, "Calli",97));
-        queue.add(new Player(5,"Ina",101));
-        queue.add(new Player(6,"Irys",73));
-        queue.add(new Player(7,"Fauna",89));
-        queue.add(new Player(8,"Bae",91));
-        queue.add(new Player(9,"Kronii",91));
-        queue.add(new Player(10,"Sana",97));
-        queue.add(new Player(11,"Mumei",63));
-        queue.add(new Player(12,"Omega",100));
 
-        //queue.printQueue();
-
-        int inQueue = 0;
-        int inGame = 0;
-
-        if (inQueue < 0)
+        while (numberOfGames < 10)
         {
+            Scanner pause = new Scanner(System.in);
+            int inGame = 0;
             int x = random.nextInt(7);
-            for (int i = 0; i < x; i++)
+
+            if (x != 0)
             {
-                lobby.add(queue.remove());
-                inGame++;
-
+                for (int i = 0; i <= x; i++)
+                {
+                    int id = random.nextInt(1000);
+                    int level = random.nextInt(100);
+                    int gamer = random.nextInt(5000);
+                    queue.add(new Player(0,"Gamer " + gamer,73));
+                    inGame++;
+                }
+                queue.printQueue();
             }
-        }
 
-        else if (inQueue >= 5)
-        {
-            lobby.printQueue();
+            if (inGame >= 5)
+            {
+                numberOfGames++;
+                for (int i = 0; i <= 5-1; i++)
+                {
+                    queue.remove();
+                }
+
+                System.out.println("Players left in queue ");
+                queue.printQueue();
+            }
+
+            pause.nextLine();
         }
-        
     }
 }
