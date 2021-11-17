@@ -11,7 +11,7 @@ public class Main {
         ArrayQueue queue = new ArrayQueue(12);
         ArrayQueue lobby = new ArrayQueue(20);
         Random random = new Random();
-        int numberOfGames = 10;
+        int numberOfGames = 0;
 
 
         while (numberOfGames < 10)
@@ -24,19 +24,19 @@ public class Main {
             {
                 for (int i = 0; i <= x; i++)
                 {
-                    int id = random.nextInt(1000);
-                    int level = random.nextInt(100);
-                    int gamer = random.nextInt(5000);
-                    queue.add(new Player(0,"Gamer " + gamer,73));
+                    int PID = random.nextInt(1000);
+                    int lvl = random.nextInt(100);
+                    int gamer = random.nextInt(1000);
+                    queue.add(new Player(PID,"Gamer #" + gamer,lvl));
                     inGame++;
                 }
                 queue.printQueue();
             }
 
-            if (inGame >= 5)
+            if (inGame <= 7)
             {
                 numberOfGames++;
-                for (int i = 0; i <= 5-1; i++)
+                for (int i = 0; i <= 5; i++)
                 {
                     queue.remove();
                 }
