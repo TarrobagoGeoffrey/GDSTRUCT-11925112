@@ -30,7 +30,7 @@ public class Main {
                     queue.add(new Player(PID,"Gamer #" + gamer,lvl));
                     inGame++;
                 }
-                queue.printQueue();
+                //queue.printQueue();
             }
 
             if (inGame >= 5)
@@ -39,11 +39,12 @@ public class Main {
                 queue.printQueue();
                 numberOfGames++;
 
-                for (int i = 0; i >= 5; i++)
+                for (int i = 0; i <= 5; i++)
                 {
                     queue.remove();
-                    System.out.print("Players left: " + queue);
                 }
+                System.out.println("Players left in queue:");
+                queue.printQueue();
             }
 
 /*            queue.remove();
