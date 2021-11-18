@@ -33,17 +33,22 @@ public class Main {
                 queue.printQueue();
             }
 
-            if (inGame <= 7)
+            if (inGame >= 5)
             {
+                System.out.println("Players in queue:");
+                queue.printQueue();
                 numberOfGames++;
-                for (int i = 0; i <= 5; i++)
+
+                for (int i = 0; i >= 5; i++)
                 {
                     queue.remove();
+                    System.out.print("Players left: " + queue);
                 }
-
-                System.out.println("Players left in queue ");
-                queue.printQueue();
             }
+
+/*            queue.remove();
+            System.out.println("The game has started and the players are removed from queue.");
+            queue.printQueue();*/
 
             pause.nextLine();
         }
