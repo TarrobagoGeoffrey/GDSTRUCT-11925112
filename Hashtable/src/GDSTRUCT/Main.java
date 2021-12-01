@@ -22,5 +22,6 @@ public class Main {
 
         System.out.println(hashtable.get("Lui"));
         System.out.println(hashtable.remove("La+"));
+        hashtable.printHashtable();
     }
 }

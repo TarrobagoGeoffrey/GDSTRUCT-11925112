@@ -66,7 +66,10 @@ public class SimpleHashtable {
         {
             return null;
         }
-        return hashtable.remove(key);
+
+        System.out.println(key + " was removed.");
+
+        return hashtable[hashedKey].value = null;
     }
 
     private int findKey(String key)
