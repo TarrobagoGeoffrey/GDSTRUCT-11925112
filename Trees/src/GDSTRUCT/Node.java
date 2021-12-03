@@ -75,6 +75,18 @@ public class Node {
         return null;
     }
 
+    public Node getMin(int value)
+    {
+        Node current = min;
+
+        while (current.leftChild != null)
+        {
+            current = current.leftChild;
+        }
+        return (current.data);
+    }
+
+
     public Node(int _data)
     {
         this.data = _data;

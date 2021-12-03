@@ -25,6 +25,11 @@ public class Tree {
         return null;
     }
 
+    public Node getMin(int value)
+    {
+        while (root.leftChild != null)
+    }
+
     public void traverseInOrder()
     {
         if (root != null)

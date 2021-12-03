@@ -14,8 +14,10 @@ public class Main {
         tree.insert(19);
         tree.insert(59);
 
+        //System.out.println(tree.get(67));
 
-        System.out.println(tree.get(67));
+
+
         tree.traverseInOrder();
     }
 }
