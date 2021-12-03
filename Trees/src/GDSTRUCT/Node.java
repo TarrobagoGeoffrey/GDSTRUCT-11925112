@@ -86,6 +86,16 @@ public class Node {
         return (current.data);
     }
 
+    public Node getMax(int value)
+    {
+        Node current = max;
+
+        while (current .rightChild != null)
+        {
+            current = current.rightChild;
+        }
+        return (current.data);
+    }
 
     public Node(int _data)
     {
