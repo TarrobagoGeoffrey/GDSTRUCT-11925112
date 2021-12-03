@@ -16,6 +16,15 @@ public class Tree {
         }
     }
 
+    public Node get(int value)
+    {
+        if (root != null)
+        {
+            return root.get(value);
+        }
+        return null;
+    }
+
     public void traverseInOrder()
     {
         if (root != null)

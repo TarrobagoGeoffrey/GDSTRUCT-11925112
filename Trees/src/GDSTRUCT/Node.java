@@ -42,7 +42,7 @@ public class Node {
         {
             leftChild.traverseInorder();
         }
-        System.out.println("Data; " + data);
+        System.out.println("Data: " + data);
 
         if (rightChild != null)
         {
