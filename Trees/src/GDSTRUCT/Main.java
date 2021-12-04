@@ -14,10 +14,9 @@ public class Main {
         tree.insert(19);
         tree.insert(59);
 
-        //System.out.println(tree.get(67));
-
-
-
-        tree.traverseInOrder();
+        tree.traverseInOrderDescending();
+        System.out.println("Highest value: " + tree.getMax());
+        System.out.println("Lowest value: " + tree.getMin());
+        System.out.println(tree.get(67));
     }
 }

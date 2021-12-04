@@ -36,17 +36,16 @@ public class Node {
         }
     }
 
-    public void traverseInorder()
+    public void traverseInorderDescending()
     {
-        if (leftChild != null)
-        {
-            leftChild.traverseInorder();
-        }
-        System.out.println("Data: " + data);
-
         if (rightChild != null)
         {
-            rightChild.traverseInorder();
+            rightChild.traverseInorderDescending();
+        }
+        System.out.println("Data: " + data);
+        if (leftChild != null)
+        {
+            leftChild.traverseInorderDescending();
         }
     }
 
@@ -73,28 +72,6 @@ public class Node {
             }
         }
         return null;
-    }
-
-    public Node getMin(int value)
-    {
-        Node current = min;
-
-        while (current.leftChild != null)
-        {
-            current = current.leftChild;
-        }
-        return (current.data);
-    }
-
-    public Node getMax(int value)
-    {
-        Node current = max;
-
-        while (current .rightChild != null)
-        {
-            current = current.rightChild;
-        }
-        return (current.data);
     }
 
     public Node(int _data)

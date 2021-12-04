@@ -25,16 +25,33 @@ public class Tree {
         return null;
     }
 
-    public Node getMin(int value)
+    public Node getMin()
     {
-        while (root.leftChild != null)
+        Node current = root;
+
+        while (current.getLeftChild() != null)
+        {
+            current = current.getLeftChild();
+        }
+        return current;
     }
 
-    public void traverseInOrder()
+    public Node getMax()
+    {
+        Node current = root;
+
+        while (current.getRightChild() != null)
+        {
+            current = current.getRightChild();
+        }
+        return current;
+    }
+
+    public void traverseInOrderDescending()
     {
         if (root != null)
         {
-            root.traverseInorder();
+            root.traverseInorderDescending();
         }
     }
 }
